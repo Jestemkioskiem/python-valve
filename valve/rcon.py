@@ -479,7 +479,7 @@ class RCON(object):
         """Create a connection to a server."""
         log.debug("Connecting to %s", self._address)
         self._socket = socket.socket(
-            socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_TCP)
+            socket.AF_INET, socket.SOCK_DGRAM)
         self._socket.connect(self._address)
 
     @_ensure('connected')
